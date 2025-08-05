@@ -53,7 +53,7 @@ h1 {
   width: 400px; 
   height: 390px; 
   margin-left: 32%; 
-  margin-top: -50%;
+  margin-top: -40%;
 }
 
 .titulo, .texto {
@@ -72,14 +72,14 @@ h1 {
 
 .nube{
     width: 10vw;
-    margin-top: -55%;
-    margin-left: -5%;
+    margin-top: -45%;
+    margin-left: -7%;
 }
 
 .texto{
     font-size: 1vw;
     margin-left: -8%;
-    margin-top: -22.5%;
+    margin-top: -19%;
      text-shadow: -2px -2px 3px black,  /* Contorno superior izquierdo */
                   2px -2px 3px black,  /* Contorno superior derecho */
                  -2px 2px 3px black,  /* Contorno inferior izquierdo */
