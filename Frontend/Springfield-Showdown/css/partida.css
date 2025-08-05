@@ -44,3 +44,70 @@ body {
   color: white;
   font-size: 40px;
 }
+
+.cartas-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .carta {
+      background: white;
+      border: 2px solid #333;
+      border-radius: 8px;
+      width: 160px;
+      padding: 10px;
+      text-align: left;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .carta h4 {
+      margin: 0 0 8px 0;
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    .atributo {
+      margin: 4px 0;
+      font-size: 0.9em;
+    }
+
+    #atributoSelect {
+      margin-top: 20px;
+    }
+
+    .ganador {
+      border: 3px solid gold;
+      background-color: #ffffcc;
+    }
+
+    .cartas-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .carta {
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 10px;
+      width: 150px;
+      background: #eee;
+      cursor: pointer;
+    }
+
+    .carta.seleccionada {
+      background-color: lightgreen;
+    }
+
+    .atributo-btns {
+      margin-top: 10px;
+    }
+
+    .atributo-btns button {
+      margin: 5px;
+    }
+
+    

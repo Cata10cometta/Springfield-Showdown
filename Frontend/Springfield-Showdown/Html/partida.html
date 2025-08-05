@@ -9,22 +9,23 @@
 </head>
 <body>
 
-  <div id="juego-container">
-    <div id="zona-avatar">
-      <img id="avatar" src="" alt="Avatar">
-      <h2 id="nombreUsuario"></h2>
-    </div>
+  <h1>Partida Iniciada</h1>
+  <div id="contenedorJugadores"></div>
 
-    <div id="cuadro-morado">
-      <h1 id="temporizador">10</h1>
-    </div>
+<div id="zonaJugadores"></div>
+<h2 id="jugadorActual">Jugador 1: elige una carta</h2>
 
-    <div id="zona-cartas">
-      <!-- Aquí se mostrarán las cartas -->
-    </div>
-  </div>
+<div id="cartasJugador" class="cartas-container"></div>
 
-  
+<div class="atributo-btns" id="atributos" style="display:none;">
+  <p>Elige un atributo para competir:</p>
+  <button onclick="seleccionarAtributo('humor')">Humor</button>
+  <button onclick="seleccionarAtributo('fuerza')">Fuerza</button>
+  <button onclick="seleccionarAtributo('popularidad')">Popularidad</button>
+  <button onclick="seleccionarAtributo('inteligencia')">Inteligencia</button>
+  <button onclick="seleccionarAtributo('carisma')">Carisma</button>
+  <button onclick="seleccionarAtributo('caos')">Caos</button>
+</div>
   
  
 

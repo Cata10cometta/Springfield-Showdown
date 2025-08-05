@@ -13,7 +13,7 @@ function agregarCampo() {
   contadorJugadores++;
 }
 
-// Envía todos los jugadores al backend y luego redirige a la partida
+// Envía los nombres al localStorage y redirige a la partida
 function iniciar() {
   const jugadores = [];
 
@@ -24,10 +24,7 @@ function iniciar() {
     const nombre = input.value.trim();
     if (nombre !== "") {
       jugadores.push({
-        userName: nombre,
-        profilePicture: "",
-        score: 0,
-        isCreator: false
+        userName: nombre
       });
     }
   }
@@ -37,39 +34,9 @@ function iniciar() {
     return;
   }
 
-  let errores = 0;
-  let respuestas = 0;
+  // Guardar en localStorage
+  localStorage.setItem("jugadores", JSON.stringify(jugadores));
 
-  jugadores.forEach((jugador) => {
-    fetch("https://localhost:7241/api/Player", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(jugador)
-    })
-      .then(response => {
-        if (!response.ok) {
-          errores++;
-          throw new Error("Error al guardar el jugador.");
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log("Jugador guardado:", data);
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      })
-      .finally(() => {
-        respuestas++;
-        if (respuestas === jugadores.length) {
-          if (errores === 0) {
-            window.location.href = "partida.html";
-          } else {
-            alert("Ocurrió un error al registrar algunos jugadores.");
-          }
-        }
-      });
-  });
+  // Redirigir a la partida
+  window.location.href = "partida.html";
 }
