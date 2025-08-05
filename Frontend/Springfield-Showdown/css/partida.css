@@ -20,219 +20,27 @@ body {
 }
 
 
-/* JUGADORES */
-.player {
-  position: absolute;
-  width: 80px;
+#juego-container {
   text-align: center;
-  color: white;
 }
 
-.player img.avatar {
-  width: 70px;
-  height: 70px;
+#zona-avatar img {
+  width: 100px;
   border-radius: 50%;
-  border: 3px solid transparent;
 }
 
-.player.active img.avatar {
-  border-color: yellow;
-}
-
-.player span {
-  display: block;
-  font-size: 12px;
-  margin-top: 5px;
-}
-
-/* POSICIONES */
-.player.pos-0 { top: 20%; left: 2%; }
-.player.pos-1 { top: 55%; left: 2%; }
-.player.pos-2 { top: 2%; left: 30%; }
-.player.pos-3 { top: 2%; left: 50%; }
-.player.pos-4 { top: 2%; left: 70%; }
-.player.pos-5 { top: 20%; right: 2%; }
-.player.pos-6 { top: 55%; right: 2%; }
-
-/* CARTAS EN MANO */
-.cards-row {
-  position: absolute;
-  bottom: 2%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  
-}
-
-.card {
-background-image: url(../img/carta.jpg);
-  border: 2px solid #5c5c59;
-  border-radius: 10px;
-  width: 118px;
-  height: 155px;
-  padding: 5px;
-  cursor: pointer;
-  transition: transform 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* ← apila elementos arriba */
-  text-align: center;
-}
-
-.card img {
-  width: 70px;
-  height: 70px;
-  top: 2px;
-  border-radius: 5px;
-}
-
-.card p {
-  font-size: 12px;
-  margin-top: 4px;
-  margin-bottom: 2px;
-}
-
-.card small {
-  font-size: 12px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-top: 2px;
-  margin-bottom: 4px;
-  max-width: 100%;
-  text-align: center;
-  word-wrap: break-word;
-}
-
-.card:hover {
-  transform: scale(1.1);
-}
-
-/* CARTAS EN MESA */
-.table-card {
-  position: absolute;
-  width: 118px;
-  height: 155px;
-  background-image: url(../img/carta.jpg);
-  border: 2px solid rgb(206, 137, 247);
-  border-radius: 10px;
-  padding: 8px;
-  text-align: center;
-  opacity: 1;
-  transform: scale(1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.table-card img {
-  width: 100px;
+#cuadro-morado {
+  background-color: #9b59b6;
+  width: 200px;
   height: 100px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.table-card p {
-  font-size: 12px;
-  margin-top: 4px;
-  margin-bottom: 2px;
-}
-
-.table-card small {
-  font-size: 12px;
-  color: #fff;
-  background: rgba(0, 255, 0, 0.2);
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-top: 2px;
-  margin-bottom: 4px;
-  max-width: 100%;
-  text-align: center;
-  word-wrap: break-word;
-}
-
-/* Animación de vuelo */
-.fly-card {
-  position: absolute;
-  width: 130px;
-  height: 150px;
-  z-index: 1000;
-  pointer-events: none;
-  transition: all 0.6s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.fly-card img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.fly-card p {
-  font-size: 12px;
-  margin-top: 4px;
-  margin-bottom: 2px;
-}
-
-.fly-card small {
-  font-size: 12px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-top: 2px;
-  margin-bottom: 4px;
-  max-width: 100%;
-  text-align: center;
-  word-wrap: break-word;
-}
-
-/* MODAL */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  margin: 20px auto;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.modal-content {
-  background: white;
-  color: black;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.hidden {
-  display: none;
-}
-
-/* BOTONES */
-.buttons {
-  position: absolute;
-  bottom: 3%;
-  right: 5%;
-  display: flex;
-  gap: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+#temporizador {
+  color: white;
+  font-size: 40px;
 }
