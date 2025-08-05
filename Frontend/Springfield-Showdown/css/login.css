@@ -1,0 +1,62 @@
+body {
+    background-image: url('../img/Login.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Simpsonfont', sans-serif;
+    
+}
+
+h1 {
+    margin-top: 55%;
+    left: 36%;
+    text-align: center;
+    color: rgb(236, 255, 23);
+    text-shadow: -3px -3px 4px black,  /* Contorno superior izquierdo */
+                  3px -3px 4px black,  /* Contorno superior derecho */
+                 -3px 3px 4px black,  /* Contorno inferior izquierdo */
+                  3px 3px 4px black; /* Contorno inferior derecho */
+   
+}
+
+.form-control {
+    width: 25vw;
+    height: 6vh;
+    margin-left: 20%;
+    border: 3px solid #000000;
+    background-color: rgba(255, 255, 255, 0.61);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+
+.texto {
+    position: absolute;
+    color: rgb(238, 255, 0);
+    text-shadow: -2px -2px 3px black,  /* Contorno superior izquierdo */
+                 2px -2px 3px black,  /* Contorno superior derecho */
+                -2px 2px 3px black,  /* Contorno inferior izquierdo */
+                 2px 2px 3px black; /* Contorno inferior derecho */
+    font-size: 1vw;
+    margin-top: -3.2%;
+    margin-left: 18%;
+    text-decoration: none;
+}   
+
+.contenedor-imagen img {
+  display: block; 
+  width: 127px; 
+  height: 70px; 
+  margin-left: 41%; 
+  margin-top: -1.5%;
+}
+
+.registro {
+    position: absolute;
+    font-family: cursive;
+    margin-left: 14%;
+    margin-top: -0.5%;
+}
+

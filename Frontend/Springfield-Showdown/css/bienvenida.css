@@ -1,0 +1,56 @@
+body {
+    background-image: url('../img/homero.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Simpsonfont', sans-serif;
+    background-color: black;
+}
+
+.avion {
+    width: 20vw;
+    margin-left: -16%;   
+    margin-top: -4%;
+    rotate: 2deg;
+}
+
+.pancarta {
+    width: 65vw;
+    margin-top: -10%;
+    margin-left: -4.5%;
+}
+
+.texto {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 2.5vw;
+    margin-top: -9%;
+    margin-left: 21%;
+    text-decoration: none;
+}   
+
+.contenedor-imagen img {
+  display: block; 
+  width: 400px; 
+  height: 200px; 
+  margin-left: 15%; 
+}
+
+.titulo {
+    position: absolute;
+    color: rgb(236, 255, 23);
+    text-shadow: -3px -3px 4px black,  /* Contorno superior izquierdo */
+                  3px -3px 4px black,  /* Contorno superior derecho */
+                 -3px 3px 4px black,  /* Contorno inferior izquierdo */
+                  3px 3px 4px black; /* Contorno inferior derecho */
+    font-size: 4vw;
+    margin-top: -20%;
+    margin-left: 3%;
+    text-decoration: none;
+    rotate: -7deg;
+    text-align: center;
+}
+
+
+

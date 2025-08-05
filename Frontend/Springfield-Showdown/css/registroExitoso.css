@@ -1,0 +1,87 @@
+body {
+    background-image: url('../img/registro-Photoroom.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Simpsonfont', sans-serif;
+}
+
+h1 {
+    color: #ffee00;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 3rem;
+    text-shadow: -3px -3px 4px black,  /* Contorno superior izquierdo */
+                  3px -3px 4px black,  /* Contorno superior derecho */
+                 -3px 3px 4px black,  /* Contorno inferior izquierdo */
+                  3px 3px 4px black; /* Contorno inferior derecho */
+}
+
+.form-label{
+    color: #000000;
+    font-size: 2.5rem;
+    margin-left: 50%;
+    font-weight: bold;
+   
+}
+
+.form-control{
+    width: 32vw;
+    height: 5vh;
+    margin-left: 50%;
+    border: 2px solid #000000;
+    background-color: rgba(255, 255, 255, 0.701);
+    text-align: center;
+    font-size: 1.5rem;
+    
+}
+
+.btn {
+    margin-top: 5%;
+    margin-left: 65%;
+    width: 10vw;
+    font-size: 3rem;
+    color: #fffb00;
+    border: transparent;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.contenedor-imagen img {
+  display: block; 
+  width: 400px; 
+  height: 390px; 
+  margin-left: 32%; 
+  margin-top: -50%;
+}
+
+.titulo, .texto {
+    position: absolute;
+    color: rgb(236, 255, 23);
+    text-shadow: -3px -3px 4px black,  /* Contorno superior izquierdo */
+                  3px -3px 4px black,  /* Contorno superior derecho */
+                 -3px 3px 4px black,  /* Contorno inferior izquierdo */
+                  3px 3px 4px black; /* Contorno inferior derecho */
+    font-size: 2vw;
+    margin-top: -17%;
+    margin-left: 31.3%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nube{
+    width: 10vw;
+    margin-top: -55%;
+    margin-left: -5%;
+}
+
+.texto{
+    font-size: 1vw;
+    margin-left: -8%;
+    margin-top: -22.5%;
+     text-shadow: -2px -2px 3px black,  /* Contorno superior izquierdo */
+                  2px -2px 3px black,  /* Contorno superior derecho */
+                 -2px 2px 3px black,  /* Contorno inferior izquierdo */
+                  2px 2px 3px black; /* Contorno inferior derecho */
+}

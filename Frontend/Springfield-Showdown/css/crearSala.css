@@ -1,0 +1,70 @@
+body {
+    background-image: url('../img/sala-Photoroom.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Simpsonfont', sans-serif;
+    
+}
+
+.duff {
+    width: 33vw;
+    margin-left: 18%;
+    margin-top: -2%;
+}
+
+.lataduff{
+    width: 28vw;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+h1{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 2vw;
+    margin-top: -35%;
+    margin-left: -25%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn{
+    position: absolute;
+    bottom: 22%;
+    left: 24%;
+    text-shadow: -2px -2px 3px black,  /* Contorno superior izquierdo */
+                  2px -2px 3px black,  /* Contorno superior derecho */
+                 -2px 2px 3px black,  /* Contorno inferior izquierdo */
+                  2px 2px 3px black; /* Contorno inferior derecho */
+    color: yellow;
+    transform: translateX(-50%);
+    font-size: 2vw;
+}
+
+.beer-can { 
+    text-align: center;
+    margin-top: -28%; 
+    margin-left: -51%;
+    
+} 
+
+button { 
+    font-size: 24px; margin: 10px;
+    background-color: transparent; 
+    border: none;
+    color: rgb(0, 0, 0);
+}
+
+#cantidad { 
+    font-weight: bold; 
+    font-size: 1.2rem;
+    border: 3.5px solid rgb(255, 247, 0);
+    border-radius: 15%; 
+    padding: 5px 15px; 
+    background-color: white; color: black; 
+}
+
+
+  
