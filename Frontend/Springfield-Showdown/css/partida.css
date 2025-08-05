@@ -8,6 +8,14 @@ body {
     
 }
 
+h1, h2{
+  font-family: 'Simpsonfont';
+  margin: 2rem;
+  margin-top: 5% ;
+}
+
+
+
 /* TIMER Y LOGO */
 .timer {
   position: absolute;
@@ -94,8 +102,10 @@ body {
       border-radius: 10px;
       padding: 10px;
       width: 150px;
-      background: #eee;
+      background: #eeff00;
       cursor: pointer;
+      margin-top: 12%;
+      font-family: 'Simpsonfont';
     }
 
     .carta.seleccionada {
@@ -104,10 +114,15 @@ body {
 
     .atributo-btns {
       margin-top: 10px;
+      margin-left: 1%;
+      text-align: center;
+      font-family: 'Simpsonfont';
+    
     }
 
     .atributo-btns button {
       margin: 5px;
+      border-radius: 20%;
     }
 
     

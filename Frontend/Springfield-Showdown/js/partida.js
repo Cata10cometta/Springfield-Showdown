@@ -1,9 +1,10 @@
 // juego.js
 
 
-const atributos = ["humor", "fuerza", "popularidad", "inteligencia", "carisma", "caos"];
-const cantidadJugadores = parseInt(localStorage.getItem('cantidadJugadores') || '2');
+var atributos = ["humor", "fuerza", "popularidad", "inteligencia", "carisma", "caos"];
+var cantidadJugadores = parseInt(localStorage.getItem('cantidadJugadores'));
 let jugadores = [];
+let nombre = ["Cata", "Maria", "Luisa", "Sergio"]
 let jugadorActual = 0;
 let ronda = 1;
 let cartaSeleccionada = null;
@@ -20,7 +21,7 @@ function generarCartas() {
     for (let attr of atributos) {
       carta[attr] = Math.floor(Math.random() * 100) + 1;
     }
-    const clave = Object.values(carta).join("-");
+    var clave = Object.values(carta).join("-");
     if (!usadas.has(clave)) {
       usadas.add(clave);
       cartas.push(carta);
@@ -33,7 +34,7 @@ function generarCartas() {
 function inicializarJugadores() {
   for (let i = 0; i < cantidadJugadores; i++) {
     jugadores.push({
-      nombre: `Jugador ${i + 1}`,
+      nombre: `${nombre[i]}`,
       cartas: generarCartas(),
       puntos: 0
     });
@@ -41,15 +42,16 @@ function inicializarJugadores() {
 }
 
 function mostrarCartas(jugadorIndex) {
-  const contenedor = document.getElementById("cartasJugador");
+  var contenedor = document.getElementById("cartasJugador");
   contenedor.innerHTML = "";
-  const cartas = jugadores[jugadorIndex].cartas;
+  var cartas = jugadores[jugadorIndex].cartas;
 
   cartas.forEach((carta, index) => {
-    const div = document.createElement("div");
+    var div = document.createElement("div");
     div.classList.add("carta");
     div.innerHTML = `
       <strong>Carta ${index + 1}</strong><br>
+
       ${atributos.map(attr => `${attr}: ${carta[attr]}`).join("<br>")}
     `;
     div.onclick = () => seleccionarCarta(index);
@@ -70,7 +72,7 @@ function seleccionarAtributo(attr) {
   atributoSeleccionado = attr;
 
   // Guardar carta del jugador 1
-  const carta1 = jugadores[0].cartas.splice(cartaSeleccionada, 1)[0];
+  var carta1 = jugadores[0].cartas.splice(cartaSeleccionada, 1)[0];
 
   // Mostrar jugador 2 para que elija
   jugadorActual = 1;
@@ -80,11 +82,11 @@ function seleccionarAtributo(attr) {
   document.getElementById("atributos").style.display = "none";
   document.querySelectorAll('.carta').forEach((c, i) => {
     c.onclick = () => {
-      const carta2 = jugadores[1].cartas.splice(i, 1)[0];
+      var carta2 = jugadores[1].cartas.splice(i, 1)[0];
 
       // Comparar
-      const valor1 = carta1[atributoSeleccionado];
-      const valor2 = carta2[atributoSeleccionado];
+      var valor1 = carta1[atributoSeleccionado];
+      var valor2 = carta2[atributoSeleccionado];
 
       let ganadorRonda = -1;
       if (valor1 > valor2) {
@@ -114,8 +116,8 @@ function seleccionarAtributo(attr) {
 
 function terminarJuego() {
   let resumen = ganadores.map((p, i) => `${jugadores[i].nombre}: ${p} puntos`).join("\n");
-  const maxPuntos = Math.max(...ganadores);
-  const ganadoresFinales = jugadores.filter((_, i) => ganadores[i] === maxPuntos);
+  var maxPuntos = Math.max(...ganadores);
+  var ganadoresFinales = jugadores.filter((_, i) => ganadores[i] === maxPuntos);
 
   resumen += `\n\nGanador: ${ganadoresFinales.map(j => j.nombre).join(", ")}`;
   alert(resumen);
